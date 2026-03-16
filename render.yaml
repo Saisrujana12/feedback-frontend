@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: feedback-system-frontend
+    env: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://feedback-backend-4-gggk.onrender.com
