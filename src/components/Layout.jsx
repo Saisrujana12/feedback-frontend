@@ -5,6 +5,7 @@ import { useTheme } from '../contexts/ThemeContext';
 import { MessageSquare, LayoutDashboard, Settings, LogOut, Sun, Moon, Bell, AlignStartVertical, UserCircle } from 'lucide-react';
 import toast from 'react-hot-toast';
 import Chatbot from './Chatbot';
+import Footer from './Footer';
 
 export default function Layout() {
   const { user, logout } = useAuth();
@@ -126,6 +127,8 @@ export default function Layout() {
       <main className="flex-1 w-full max-w-7xl mx-auto p-6 flex flex-col relative z-10 transition-colors duration-300">
         <Outlet />
       </main>
+
+      <Footer />
       
       {/* Decorative background elements that persist behind router pages */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden mix-blend-multiply dark:mix-blend-screen opacity-50 dark:opacity-100">
